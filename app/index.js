@@ -19,10 +19,22 @@ const Home = () => {
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
           headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimenstion="60%" />
+            <ScreenHeaderBtn iconUrl={icons.menu} dimenstion="40%" />
           ),
+          headerRight: () => (
+            <ScreenHeaderBtn iconUrl={images.profile} dimenstion="100%" />
+          ),
+          headerTitle: "",
         }}
       />
+      {/* A scroll view means scroll box */}
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View className="flex-1 p-4">
+          <Welcome />
+          <Popularjobs />
+          <Nearbyjobs />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
